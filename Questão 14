@@ -1,0 +1,20 @@
+ import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner entrada = new Scanner(System.in);
+   double peso;
+   double recomendacao = 35.0; 
+   double quantidadeRecomendada; 
+    
+   System.out.println("QUAL É O SEU PESO CORPORAL: ");
+   peso = entrada.nextDouble();
+    
+   quantidadeRecomendada = (peso * recomendacao) / 1000.0;
+    
+   System.out.println("A QUANTIDADE RECOMENDADA DE ÁGUA PARA O SEU PESO É DE: " + quantidadeRecomendada + " L , " + "POR DIA."); 
+    
+     
+    
+  }
+}
