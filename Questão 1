@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner entrada = new Scanner(System.in);
+    Integer numero1;
+    Integer numero2;
+    Integer resto;
+    
+    System.out.println("DIGITE O VALOR DO PRIMEIRO NÚMERO: ");
+    numero1 = entrada.nextInt();
+    System.out.println("DIGITE O VALOR DO SEGUNDO NÚMERO: ");
+    numero2 = entrada.nextInt();
+    
+    resto = numero1 % numero2;
+    
+    System.out.println("O RESTO DA DIVISÃO ENTRE ELES É: " + resto);  
+    
+    }   
+}
