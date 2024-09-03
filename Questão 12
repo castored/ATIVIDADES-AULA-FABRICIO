@@ -1,0 +1,37 @@
+ import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+   Scanner entrada = new Scanner(System.in);
+   
+    double larguraRevestimento;
+    double comprimentoRevestimento;
+    double comprimentoCeramica;
+    double larguraCeramica;
+    double areaRevestimento;
+    double areaCeramica;
+    double areaMetrica;
+    double acrescento = 0.10;
+    double acabamento;
+    double arrendondadoParaCima;
+   
+    System.out.println("DIGITE A LARGURA DA ARÉA DE REVESTIMENTO EM (metros): ");
+    larguraRevestimento = entrada.nextDouble();
+    System.out.println("DIGITE O COMPRIMENTO DA ARÉA DE REVESTIMENTO EM (metros): ");
+    comprimentoRevestimento = entrada.nextDouble();
+    System.out.println("DIGITE O COMPRIMENTO DA CERÂMICA EM (metros): ");
+    comprimentoCeramica = entrada.nextDouble();
+    System.out.println("DIGITE A LARGURA DA CERÂMICA EM (metros): ");
+    larguraCeramica = entrada.nextDouble();
+    
+    areaRevestimento = larguraRevestimento * comprimentoRevestimento;
+    areaCeramica = larguraCeramica * comprimentoCeramica;
+    areaMetrica = areaRevestimento / areaCeramica;
+    acabamento = areaMetrica + acrescento;
+    arrendondadoParaCima = Math.ceil(acabamento);
+    
+    System.out.println("QUANTIDADE DE REVESTIMENTO NECESSÁRIO PARA A OBRA: " + arrendondadoParaCima + " m² ");
+   
+    
+  }
+}
