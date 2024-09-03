@@ -1,0 +1,92 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+   Scanner entrada = new Scanner(System.in);
+    
+    double saldo = 0.0;
+    StringBuilder extrato = new StringBuilder();
+    Integer opcao;
+    double valorDeposito;
+    double valorSaque;
+    
+    while (true) {
+      System.out.println("===================================");
+      System.out.println("          CAIXA ELETRÔNICO         ");
+      System.out.println("===================================");
+      System.out.println("         ESCOLHA UMA OPÇÃO: ");
+      System.out.println("------------------------------------");
+      System.out.println("    1 - Para exibir saldo");
+      System.out.println("    2 - Para exibir extrato");
+      System.out.println("    3 - Realizar depósito");
+      System.out.println("    4 - Realizar saque");
+      System.out.println("    5 - Sair");
+      System.out.println("===================================");
+      
+      opcao = entrada.nextInt();
+      
+      switch (opcao) {
+        case 1:
+          
+           System.out.println("Seu saldo é: " + saldo);
+          break;
+          
+        case 2:
+          
+          System.out.println("Extrato: ");
+          if (extrato.length() == 0) {
+             System.out.println("Nenhuma transação realizada.");
+          } else {
+             System.out.println(extrato.toString());
+          }
+          break;
+          
+        case 3:
+          
+          System.out.print("Digite o valor do déposito: R$ ");
+          valorDeposito = entrada.nextDouble();
+          if (valorDeposito > 0) {
+            saldo += valorDeposito;
+            extrato.append("Depósito de R$ ").append(valorDeposito).append("\n");
+            System.out.println("DEPÓSITO REALIZADO COM SUCESSO !");
+          } else {
+            System.out.println("Valor inválido para depósito.");
+          }
+          break;
+         
+          case 4: 
+                           
+             System.out.print("Digite o valor do saque: R$ ");
+             valorSaque = entrada.nextDouble();
+             if (valorSaque > 0 && valorSaque <= saldo) {
+                 saldo -= valorSaque;
+                 extrato.append("Saque de R$ ").append(valorSaque).append("\n");
+                 System.out.println("SAQUE REALIZADO COM SUCESSO!! ");
+             }else if (valorSaque > saldo) {
+                 System.out.println("Saldo INSUFICIENTE para realizar o saque! ");
+             }else {
+                 System.out.println("Valor inválido para saque! ");
+             }
+             break;
+                           
+          case 5:
+          
+                 System.out.println("OBRIGADO POR UTILIZAR O CAIXA ELETRÔNICO. ATÉ MAIS!! ");
+                 entrada.close();
+                 return;
+                           
+              default:
+                           
+                 System.out.println("Opção inválida. O programa será ENCERRADO!");
+                 entrada.close();
+                 return;
+          
+      
+    }
+    
+    
+    
+    
+  }
+}
+}
