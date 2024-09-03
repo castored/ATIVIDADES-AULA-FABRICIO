@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner entrada =new Scanner(System.in);
+   double x1;
+   double y1;
+   double x2;
+   double y2;
+   double distancia;
+    
+   System.out.println("Digite a cordenada x1 de P1: ");
+   x1 = entrada.nextDouble();
+   System.out.println("Digite a cordenada y1 de P1: ");
+   y1 = entrada.nextDouble();
+   System.out.println("Digite a cordenada x2 de P2: ");
+   x2 = entrada.nextDouble();
+   System.out.println("Digite a cordenada y2 de P2: ");
+   y2 = entrada.nextDouble();
+   
+   distancia = Math.sqrt(Math.pow(x1-x2, 2) + Math.pow(y1 - y2, 2)); 
+   
+   System.out.println("A distância entre p1 e p2 é: " + distancia); 
+    
+        
+  }
+}
