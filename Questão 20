@@ -1,0 +1,43 @@
+ import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+   Scanner entrada = new Scanner(System.in);
+    
+    String descricao;
+    Integer quantidade;
+    double precoUnitario;
+    double total;
+    double desconto;
+    double totalAPagar;
+    
+    System.out.print("Digite a descrição do produto: ");
+    descricao = entrada.nextLine();
+    System.out.print("Digite a quantidade adquirida: ");
+    quantidade = entrada.nextInt();
+    System.out.println("Digite o preço unitário do produto: ");
+    precoUnitario = entrada.nextDouble();
+    
+    total = quantidade * precoUnitario;
+    
+    // Calculo do desconto
+    
+    if(quantidade <= 5) {
+      desconto = total * 0.02; 
+    }else if (quantidade > 5 && quantidade <= 10) {
+      desconto = total * 0.03; 
+    }else if (quantidade > 10 && quantidade <= 30){
+      desconto = total * 0.05; 
+    }else {
+      desconto = total *0.10;
+    }
+   
+   totalAPagar = total - desconto;
+    
+    System.out.println("Descrição do Produto: " + descricao);
+    System.out.println("Total: " + total + " R$");
+    System.out.println("Desconto: " + desconto + " R$");
+    System.out.println("Total a Pagar: " + totalAPagar + " R$" );
+    
+  }
+}
