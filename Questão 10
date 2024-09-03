@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+   Scanner entrada = new Scanner(System.in);
+    
+   String horaInput;
+   int horas;
+   int minutos;
+   int minutosDesdeInicio; 
+    
+   System.out.println("DIGITE A HORA NO FORMATO HH:MM: ");
+   horaInput = entrada.nextLine();
+   
+   String[] partes = horaInput.split(":");
+   horas = Integer.parseInt(partes[0]);
+   minutos = Integer.parseInt(partes[1]);
+   
+   minutosDesdeInicio = (horas * 60) + minutos;
+    
+    
+   System.out.println("Minutos desde o início do dia: " + minutosDesdeInicio);
+    
+  }
+}
