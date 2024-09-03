@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+   Scanner entrada = new Scanner(System.in);
+    
+    Double area;
+    Double raio;
+    Double pi = 3.14;
+    
+    System.out.println("DIGITE O RAIO DO CIRCULO: ");
+    raio = entrada.nextDouble();
+    
+    area = pi * (raio * raio);
+    
+    System.out.println("Á ARÊA DO CIRCULO É: " + area + " m²" );
+    
+    
+  }
+}
