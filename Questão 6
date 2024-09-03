@@ -1,0 +1,32 @@
+import java.util.Scanner;
+ 
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner entrada = new Scanner(System.in);
+    
+    Integer valorA;
+    Integer valorB;
+    Integer troca; 
+    
+    System.out.println("DIGITE O VALOR DE A: ");
+    valorA = entrada.nextInt();
+    
+    System.out.println("DIGITE O VALOR DE B: ");
+    valorB = entrada.nextInt();
+    
+    System.out.println("VALORES ANTES DA TROCA: ");
+    System.out.println("A = " + valorA);
+    System.out.println("B = " + valorB);
+    
+    troca = valorA;
+    valorA = valorB;
+    valorB = troca;
+    
+    System.out.println("VALORES APÓS A TROCA: ");
+    System.out.println("A = " + valorA);
+    System.out.println("B = "+ valorB);
+    
+   
+  }
+}
