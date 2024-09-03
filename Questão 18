@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+   Scanner entrada = new Scanner(System.in);
+   
+   Integer idade;
+   
+   System.out.print("QUAL A IDADE DA PESSOA?: ");
+   idade = entrada.nextInt();
+   
+   if(idade < 16) {
+     System.out.println("NÃO É ELEITOR");   
+   } else if (idade >= 16 && idade <=17) {
+     System.out.println("ELEITOR FACULTATIVO");
+   }else if (idade >= 18 && idade <= 65){
+      System.out.println("ELEITOR OBRIGATÓRIO");
+     }else {
+       System.out.println("ELEITOR FACULTATIVO");
+     }
+   
+  
+  }
+}
