@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner entrada = new Scanner(System.in);
+    
+    Float nota1;
+    Float nota2;
+    Float nota3;
+    Float soma;
+    Float media;
+    
+    System.out.print("Digite a nota 1: ");
+    nota1 = entrada.nextFloat();
+    System.out.print("Digite a nota 2: ");
+    nota2 = entrada.nextFloat();
+    System.out.print("Digite a nota 3: ");
+    nota3 = entrada.nextFloat();
+    
+    soma = nota1 + nota2 + nota3;
+    media = soma / 3;
+    
+    System.out.println("A média das notas fornecidas, são: " + media);
+    
+  }
+}
