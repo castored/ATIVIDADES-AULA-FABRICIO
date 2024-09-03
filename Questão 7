@@ -1,0 +1,17 @@
+ import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+  
+  for Integer numero = 0; numero <= 10; num++;
+  Integer Quadrado = numero * numero * numero;
+  Integer Cubo = numero * numero;
+  
+  Scanner entrada = new Scanner(System.in);
+  System.out.println("Número: %d | Quadrado: %d | Cubo: %d%n", numero, quadrado, cubo);
+  numero = entrada.nextInt();
+    
+   }  
+    
+  }
+}
