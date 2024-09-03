@@ -1,0 +1,25 @@
+ import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner entrada = new Scanner(System.in);
+    
+    double valorCaneta = 1.50;
+    double nCaneta;
+    double zReais;
+    double yTroco;
+    
+    System.out.println("QUANTIDADE DE CANETAS: ");
+    nCaneta = entrada.nextDouble ();
+    
+    System.out.println("VALOR PAGO EM REAIS: ");
+    zReais =entrada.nextDouble ();
+    
+    yTroco = (nCaneta * valorCaneta) - zReais;
+    
+   System.out.println("TROCO: " + yTroco + " E CADA CANETA CUSTOU: " + valorCaneta + " R$ ");
+    
+    
+  }
+}
